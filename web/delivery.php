@@ -1,0 +1,35 @@
+<?php
+if($oneday==1)
+{
+	$addcharge=30;
+}
+else
+{
+	$addcharge=0;
+}
+if($user_id=='guest')
+	{
+		$delivery=30;
+	}
+else
+{
+	if($order_num==1)
+	{
+		$delivery=0;
+	}
+	else
+	{
+		if($pincode==700035)
+			$delivery=30;
+		else
+			$delivery=40;
+	}
+}
+$delivery=$delivery+$addcharge;
+if($oneday==1)
+	$days=1;
+else if($pincode==700035)
+	$days=3;
+else
+	$days=4;
+	?>
